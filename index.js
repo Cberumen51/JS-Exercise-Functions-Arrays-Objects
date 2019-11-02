@@ -37,8 +37,12 @@ function exampleFunction(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  return {
+    id: id,
+    name: name,
+    email: email,
+  };
 }
 
 /**
@@ -54,9 +58,13 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(name) {
+  let get = {
+    name: name
+  }
+return (`Hello, my name is ${get}`); 
 }
+getName("leia")
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -71,8 +79,15 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
+function makeSmartPerson(name) {
   /* code here */
+  var object = {
+    name: name,
+    sum (x ,y) {return x + y;},
+    speak() {return `Hello, my name is ${name}`;
+  }
+  }
+  return object;
 }
 
 /**
@@ -87,8 +102,9 @@ function makeSmartPerson(/* code here */) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(/* code here */) {
+function getCarInfoByIndex(arr, x) {
   /* code here */
+  
 }
 
 /**
@@ -104,6 +120,8 @@ function getCarInfoByIndex(/* code here */) {
 */
 function getLastCarInfo(/* code here */) {
   /* code here */
+  // cont i = array.length - 1;
+  // return array[i];
 }
 
 /**
@@ -143,8 +161,14 @@ function sortCarInventory(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
+function getModelYears(array) {
   /* code here */
+  let arr = [];
+  for(let i = 0; i < array.length; i++)
+  {
+    arr.push(array[i].car_year)
+  }
+  return arr;
 }
 
 /**
